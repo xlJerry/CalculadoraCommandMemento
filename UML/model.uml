@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ">
+  <uml:Model xmi:id="_6EpdsD6wEfGR39sX1-TevA" name="model">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_6G5gcD6wEfGR39sX1-TevA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hQE7YD6xEfGR39sX1-TevA" name="Caretaker" visibility="package">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__Du78D6yEfGR39sX1-TevA" name="historial" visibility="private" type="_LgAZ8D60EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x0vVoD6zEfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4gsQQD6zEfGR39sX1-TevA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VzlYAD6zEfGR39sX1-TevA" name="apuntador" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_AkBNgD60EfGR39sX1-TevA" name="ejecutar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HP7E0D60EfGR39sX1-TevA" name="comando" type="_LgAZ8D60EfGR39sX1-TevA" direction="out"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-eHbgD60EfGR39sX1-TevA" name="deshacer"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-0X_YD60EfGR39sX1-TevA" name="rehacer"/>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_ToDUkD6zEfGR39sX1-TevA" name="Comando"/>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_bghFoD6zEfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LgAZ8D60EfGR39sX1-TevA" name="Comando">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PZDAsj63EfGR39sX1-TevA" name="caretaker" type="_hQE7YD6xEfGR39sX1-TevA" association="_PZCZoD63EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PZDAsz63EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PZDnwD63EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bRiuID62EfGR39sX1-TevA" name="ejecutar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_c16D4D62EfGR39sX1-TevA" name="deshacer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PZCZoD63EfGR39sX1-TevA" memberEnd="_PZDAsj63EfGR39sX1-TevA _PZDnwT63EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PZDAsD63EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PZDAsT63EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_PZDnwT63EfGR39sX1-TevA" name="comando" type="_LgAZ8D60EfGR39sX1-TevA" aggregation="shared" association="_PZCZoD63EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_c54IcD63EfGR39sX1-TevA" name="ComandoDigitar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8y82AD67EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9JXx8D67EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9pnYQD67EfGR39sX1-TevA" name="digito">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oMPbQj68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_oMO0MD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oMPbQz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oMPbRD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1DKAID64EfGR39sX1-TevA" name="deshacer"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1DKnMD64EfGR39sX1-TevA" name="ejecutar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eRmwYD63EfGR39sX1-TevA" name="ComandoSumar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MRH0MD68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MRIbQD68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ouksQj68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_oukFMD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ouksQz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ouksRD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1ONZkD64EfGR39sX1-TevA" name="ejecutar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1OOAoD64EfGR39sX1-TevA" name="deshacer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ew6ikD63EfGR39sX1-TevA" name="ComandoRestar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MdYHgD68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MdYukD68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pKFjkD68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_pKEVcD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pKFjkT68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pKFjkj68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1XWugD64EfGR39sX1-TevA" name="deshacer"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1XX8oD64EfGR39sX1-TevA" name="ejecutar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fZxSUD63EfGR39sX1-TevA" name="ComandoMultiplicar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MqG78D68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MqHjAD68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1hJjsD64EfGR39sX1-TevA" name="ejecutar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1hKx0D64EfGR39sX1-TevA" name="deshacer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_g1ebUD63EfGR39sX1-TevA" name="ComandoDividir">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M0ZgYD68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_M0augD68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qHQ9gD68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_qHQWcD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qHQ9gT68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qHQ9gj68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1rmgMD64EfGR39sX1-TevA" name="ejecutar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1rnHQD64EfGR39sX1-TevA" name="deshacer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hZRE4D63EfGR39sX1-TevA" name="ComandoEquivalencia">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NEhAAD68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NEhnED68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qoKrIz68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_qoKrID68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qoLSMD68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qoLSMT68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2cRIID64EfGR39sX1-TevA" name="ejecutar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2cRvMD64EfGR39sX1-TevA" name="deshacer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iKY_0D63EfGR39sX1-TevA" name="ComandoBorrar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NSi08D68EfGR39sX1-TevA" name="receptor" type="_VGQwQD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NSjcAD68EfGR39sX1-TevA" name="mementoAnterior" type="_fxkcYD65EfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7uZzUj68EfGR39sX1-TevA" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_7uZMQD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7uZzUz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7uZzVD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2koZ8D64EfGR39sX1-TevA" name="deshacer"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2kpBAD64EfGR39sX1-TevA" name="ejecutar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_9sfp8D63EfGR39sX1-TevA" client="_c54IcD63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_-tBS0D63EfGR39sX1-TevA" client="_eRmwYD63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="__exf4D63EfGR39sX1-TevA" client="_ew6ikD63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_AD-esD64EfGR39sX1-TevA" client="_fZxSUD63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_F_s2QD64EfGR39sX1-TevA" client="_g1ebUD63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_GePMYD64EfGR39sX1-TevA" client="_hZRE4D63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_HVDfoD64EfGR39sX1-TevA" client="_iKY_0D63EfGR39sX1-TevA" supplier="_LgAZ8D60EfGR39sX1-TevA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VGQwQD65EfGR39sX1-TevA" name="Calculadora" visibility="package">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZUfrQD65EfGR39sX1-TevA" name="valorActual" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YR1e8D66EfGR39sX1-TevA" name="expresion">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Yk5k4D66EfGR39sX1-TevA" name="memoriaOp">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y-xdcD66EfGR39sX1-TevA" name="esperarOperando">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZQAXYD66EfGR39sX1-TevA" name="operacionPend">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CnbykD67EfGR39sX1-TevA" name="Guardar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aJVWoD67EfGR39sX1-TevA" type="_fxkcYD65EfGR39sX1-TevA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_C7jocD67EfGR39sX1-TevA" name="setEstado" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fKlC8D67EfGR39sX1-TevA" name="valorActual">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hEfx8D67EfGR39sX1-TevA" name="expresion">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_luOWID67EfGR39sX1-TevA" name="memoriaOp">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qYdQoD67EfGR39sX1-TevA" name="esperarOperando">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sGxMkD67EfGR39sX1-TevA" name="operacionPend">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LJp5gD_zEfG5gpGhlZ7IAQ" name="ingresarPunto"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RFrMAD_zEfG5gpGhlZ7IAQ" name="borrarEntrada"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WDLn0D_zEfG5gpGhlZ7IAQ" name="borrarUltimoDigito"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_f03kUD_zEfG5gpGhlZ7IAQ" name="construirOperacionActual"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_m-zbcD_zEfG5gpGhlZ7IAQ" name="limitarTexto"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ow85ED_0EfG5gpGhlZ7IAQ" name="Guardar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rDBpYD_0EfG5gpGhlZ7IAQ" name="ingresarDigito" concurrency="guarded"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5LQIUD_0EfG5gpGhlZ7IAQ" name="seleccionarOperacion"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ju6H4D_1EfG5gpGhlZ7IAQ" name="equivalencia"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MZamUD_1EfG5gpGhlZ7IAQ" name="borrar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fxkcYD65EfGR39sX1-TevA" name="MementoCalculadora">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-dFSAD66EfGR39sX1-TevA" name="esperarOperando">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-dGgID66EfGR39sX1-TevA" name="expresion">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-dHHMD66EfGR39sX1-TevA" name="memoriaOp">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-dHuQD66EfGR39sX1-TevA" name="valorActual" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-dI8YD66EfGR39sX1-TevA" name="operacionPend">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_U4c2Yj68EfGR39sX1-TevA" name="comandoequivalencia" type="_hZRE4D63EfGR39sX1-TevA" association="_U4boQD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U4c2Yz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U4c2ZD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_b8mOkj68EfGR39sX1-TevA" name="comandodividir" type="_g1ebUD63EfGR39sX1-TevA" association="_b8lngD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b8mOkz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b8mOlD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cY6XID68EfGR39sX1-TevA" name="comandomultiplicar" type="_fZxSUD63EfGR39sX1-TevA" association="_cY5JAD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cY6XIT68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cY6XIj68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dbqNkj68EfGR39sX1-TevA" name="comandorestar" type="_ew6ikD63EfGR39sX1-TevA" association="_dbpmgD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dbqNkz68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dbq0oD68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eQHwYT68EfGR39sX1-TevA" name="comandosumar" type="_eRmwYD63EfGR39sX1-TevA" association="_eQGiQD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eQHwYj68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eQHwYz68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gYZrgj68EfGR39sX1-TevA" name="comandodigitar" type="_c54IcD63EfGR39sX1-TevA" association="_gYZEcD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gYaSkD68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYaSkT68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6NIN0j68EfGR39sX1-TevA" name="comandoborrar" type="_iKY_0D63EfGR39sX1-TevA" association="_6NHmwD68EfGR39sX1-TevA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6NIN0z68EfGR39sX1-TevA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6NIN1D68EfGR39sX1-TevA" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZAaxUD68EfGR39sX1-TevA" name="recuperar"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_U4boQD68EfGR39sX1-TevA" memberEnd="_U4c2Yj68EfGR39sX1-TevA _U4c2ZT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U4c2YD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U4c2YT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_U4c2ZT68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_U4boQD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_b8lngD68EfGR39sX1-TevA" visibility="package" memberEnd="_b8mOkj68EfGR39sX1-TevA _b8mOlT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b8mOkD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b8mOkT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_b8mOlT68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_b8lngD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cY5JAD68EfGR39sX1-TevA" memberEnd="_cY6XID68EfGR39sX1-TevA _cY6XIz68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cY5wED68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cY5wET68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cY6XIz68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_cY5JAD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dbpmgD68EfGR39sX1-TevA" memberEnd="_dbqNkj68EfGR39sX1-TevA _dbq0oT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dbqNkD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dbqNkT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_dbq0oT68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_dbpmgD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_eQGiQD68EfGR39sX1-TevA" memberEnd="_eQHwYT68EfGR39sX1-TevA _eQHwZD68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQHJUD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQHwYD68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_eQHwZD68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_eQGiQD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gYZEcD68EfGR39sX1-TevA" memberEnd="_gYZrgj68EfGR39sX1-TevA _gYaSkj68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gYZrgD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gYZrgT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gYaSkj68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_gYZEcD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_oMO0MD68EfGR39sX1-TevA" memberEnd="_oMPbQj68EfGR39sX1-TevA _oMPbRT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oMPbQD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oMPbQT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_oMPbRT68EfGR39sX1-TevA" name="comandodigitar" type="_c54IcD63EfGR39sX1-TevA" association="_oMO0MD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_oukFMD68EfGR39sX1-TevA" memberEnd="_ouksQj68EfGR39sX1-TevA _ouksRT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ouksQD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ouksQT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ouksRT68EfGR39sX1-TevA" name="comandosumar" type="_eRmwYD63EfGR39sX1-TevA" association="_oukFMD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pKEVcD68EfGR39sX1-TevA" memberEnd="_pKFjkD68EfGR39sX1-TevA _pKFjkz68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pKE8gD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pKE8gT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_pKFjkz68EfGR39sX1-TevA" name="comandorestar" type="_ew6ikD63EfGR39sX1-TevA" association="_pKEVcD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qHQWcD68EfGR39sX1-TevA" memberEnd="_qHQ9gD68EfGR39sX1-TevA _qHQ9gz68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qHQWcT68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qHQWcj68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_qHQ9gz68EfGR39sX1-TevA" name="comandodividir" type="_g1ebUD63EfGR39sX1-TevA" association="_qHQWcD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qoKrID68EfGR39sX1-TevA" memberEnd="_qoKrIz68EfGR39sX1-TevA _qoLSMj68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qoKrIT68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qoKrIj68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_qoLSMj68EfGR39sX1-TevA" name="comandoequivalencia" type="_hZRE4D63EfGR39sX1-TevA" association="_qoKrID68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6NHmwD68EfGR39sX1-TevA" memberEnd="_6NIN0j68EfGR39sX1-TevA _6NIN1T68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6NIN0D68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6NIN0T68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6NIN1T68EfGR39sX1-TevA" name="mementocalculadora" type="_fxkcYD65EfGR39sX1-TevA" aggregation="shared" association="_6NHmwD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_7uZMQD68EfGR39sX1-TevA" memberEnd="_7uZzUj68EfGR39sX1-TevA _7uZzVT68EfGR39sX1-TevA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7uZzUD68EfGR39sX1-TevA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7uZzUT68EfGR39sX1-TevA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_7uZzVT68EfGR39sX1-TevA" name="comandoborrar" type="_iKY_0D63EfGR39sX1-TevA" association="_7uZMQD68EfGR39sX1-TevA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AZ1WQD_yEfG5gpGhlZ7IAQ" name="MainGUI">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UcD00D_6EfG5gpGhlZ7IAQ" name="main" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-7mHkD_6EfG5gpGhlZ7IAQ" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BQZx4D_yEfG5gpGhlZ7IAQ" name="CalculadoraGUI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GqzBMD_2EfG5gpGhlZ7IAQ" name="calculadora" visibility="private" type="_VGQwQD65EfGR39sX1-TevA" aggregation="shared"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JCUcwD_3EfG5gpGhlZ7IAQ" name="careTaker" visibility="private" type="_hQE7YD6xEfGR39sX1-TevA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_T5bJMD_3EfG5gpGhlZ7IAQ" name="lineaSuperior" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_1f2tQD_3EfG5gpGhlZ7IAQ">
+          <body>- lineaSuperior: JLabel</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_o_XLsD_4EfG5gpGhlZ7IAQ" name="lineaPrincipal" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5-j3wD_4EfG5gpGhlZ7IAQ" name="operacionResuelta" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LCFDID_5EfG5gpGhlZ7IAQ" name="resultadoOperacion" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cNcJoj_-EfG5gpGhlZ7IAQ" name="calculadora" type="_VGQwQD65EfGR39sX1-TevA" association="_cNa7gD_-EfG5gpGhlZ7IAQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cNcJoz_-EfG5gpGhlZ7IAQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cNcJpD_-EfG5gpGhlZ7IAQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mEsvYEAOEfGp_IFQShOuCw" name="caretaker" type="_hQE7YD6xEfGR39sX1-TevA" association="_mElaoEAOEfGp_IFQShOuCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p2JnwEAOEfGp_IFQShOuCw" name="LiteralInteger1" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p2MEAEAOEfGp_IFQShOuCw" name="LiteralUnlimitedNatural1" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YjYsAD_5EfG5gpGhlZ7IAQ" name="calculadoraGUI"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_eTozYD_5EfG5gpGhlZ7IAQ" name="agregarBoton"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_f5ldgD_5EfG5gpGhlZ7IAQ" name="instalarAtajosDeTeclado"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kg_GcD_5EfG5gpGhlZ7IAQ" name="registrarAtajo"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nUUwwD_5EfG5gpGhlZ7IAQ" name="manejarAccion">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t8E18D_7EfG5gpGhlZ7IAQ" name="texto">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_o6Qz0D_5EfG5gpGhlZ7IAQ" name="procesarRetroceso"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8__L8D_5EfG5gpGhlZ7IAQ" name="construirOperacionActualSinLimite"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LEclMD_6EfG5gpGhlZ7IAQ" name="actualizarPantalla"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cNa7gD_-EfG5gpGhlZ7IAQ" memberEnd="_cNcJoj_-EfG5gpGhlZ7IAQ _cNcJpT_-EfG5gpGhlZ7IAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cNcJoD_-EfG5gpGhlZ7IAQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cNcJoT_-EfG5gpGhlZ7IAQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_cNcJpT_-EfG5gpGhlZ7IAQ" name="calculadoragui" type="_BQZx4D_yEfG5gpGhlZ7IAQ" association="_cNa7gD_-EfG5gpGhlZ7IAQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_We7nUEABEfG5gpGhlZ7IAQ" client="_AZ1WQD_yEfG5gpGhlZ7IAQ" supplier="_BQZx4D_yEfG5gpGhlZ7IAQ"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_mElaoEAOEfGp_IFQShOuCw" memberEnd="_mEsvYEAOEfGp_IFQShOuCw _mEtWckAOEfGp_IFQShOuCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mEsIUEAOEfGp_IFQShOuCw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mEsIUUAOEfGp_IFQShOuCw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mEtWckAOEfGp_IFQShOuCw" name="calculadoragui" type="_BQZx4D_yEfG5gpGhlZ7IAQ" association="_mElaoEAOEfGp_IFQShOuCw"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_F_GjYD_3EfG5gpGhlZ7IAQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F_NRED_3EfG5gpGhlZ7IAQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <ActionLanguage:TextualRepresentation xmi:id="_1f3UUD_3EfG5gpGhlZ7IAQ" base_Comment="_1f2tQD_3EfG5gpGhlZ7IAQ" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+</xmi:XMI>
