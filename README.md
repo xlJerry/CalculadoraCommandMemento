@@ -1,6 +1,6 @@
 # CalculadoraCommandMemento
 
-Proyecto de calculadora de escritorio en Java implementando los patrones **Command** y **Memento** + UMLen papyrus.
+Proyecto de calculadora de escritorio en Java implementando los patrones **Command** y **Memento** + UML en papyrus.
 
 ## Integrantes
 
